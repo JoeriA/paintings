@@ -18,12 +18,15 @@ public class Solver {
             int begin = 0;
             for (int m = 0; m < M; m++) {
                 boolean current = in[n][m];
-                if ((previous && !current) || current && (m == M - 1)) {
+                if (previous && !current) {
                     solution.paintLine(n, begin, n, (m - 1));
                     previous = false;
                 } else if (!previous && current) {
                     begin = m;
                     previous = true;
+                }
+                if (current && (m == M - 1)) {
+                    solution.paintLine(n, begin, n, m);
                 }
             }
         }
