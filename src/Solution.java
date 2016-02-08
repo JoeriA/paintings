@@ -10,6 +10,10 @@ public class Solution {
     private List paintLines = new ArrayList<>();
     private List eraseCells = new ArrayList<>();
 
+    public Solution() {
+
+    }
+
     public void paintSquare(int R, int C, int S) {
         paintSquares.add(new int[] {R, C, S});
     }

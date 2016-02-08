@@ -10,10 +10,9 @@ public class main {
         DataReader dataReader = new DataReader();
         boolean[][] logoIn = dataReader.readFile(logoFileName);
 
-        Solution solution = new Solution();
-        solution.paintSquare(1,2,3);
-        solution.paintLine(1,2,3,4);
-        solution.eraseCell(1,2);
+        System.out.println("Solving");
+        Solver solver = new Solver(logoIn);
+        Solution solution = solver.onlyLinesHorizontal();
 
         System.out.println("Done");
     }
