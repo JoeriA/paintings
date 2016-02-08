@@ -6,9 +6,9 @@ import java.util.List;
  */
 public class Solution {
 
-    private List paintSquares = new ArrayList<>();
-    private List paintLines = new ArrayList<>();
-    private List eraseCells = new ArrayList<>();
+    private ArrayList<int[]> paintSquares = new ArrayList<>();
+    private ArrayList<int[]> paintLines = new ArrayList<int[]>();
+    private ArrayList<int[]> eraseCells = new ArrayList<int[]>();
 
     public Solution() {
 
@@ -26,15 +26,15 @@ public class Solution {
         eraseCells.add(new int[] {R, C});
     }
 
-    public List getPaintSquares() {
+    public ArrayList<int[]> getPaintSquares() {
         return paintSquares;
     }
 
-    public List getPaintLines() {
+    public ArrayList<int[]> getPaintLines() {
         return paintLines;
     }
 
-    public List getEraseCells() {
+    public ArrayList<int[]> getEraseCells() {
         return eraseCells;
     }
 }

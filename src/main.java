@@ -14,6 +14,11 @@ public class main {
         Solver solver = new Solver(logoIn);
         Solution solution = solver.onlyLinesHorizontal();
 
+        System.out.println("Write solution");
+        SolutionWriter solutionWriter = new SolutionWriter();
+        solutionWriter.writeSolution(solution, "logo_simple");
+        solutionWriter.testPainting(solution, "logo_simple", logoIn);
+
         System.out.println("Done");
     }
 }
